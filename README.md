@@ -1,17 +1,24 @@
-# flask-blueprintTemplate
+# Flask-ProjectManager
 
-When this program is ran, it will create a directory for a flask app to be used as a blueprint (Divisional style).
-When ran it will:
-    Create a user named directory
-        create the __init__.py
-            create the variable named after the user named directory
-        create views.py
-            create just bacis imports
-        create the directory static
-            create directory css
-            create directory img
-            create directory js
-            create directory jquery
-        create the directory templates
-            create index.html inside of templates directory
-        
+#### This utility is to create a Flask project, or create blueprints in a project.
+
+
+### Requirments
+* Python 2
+  * Perfered 2.7 and up
+* Flask
+
+### Other Suggested Requirments
+* Virtualenv or any other virtual environment
+
+
+### Installing
+<code> Coming Soon! </code>
+
+### Options Availible
+<code> Coming Soon!</code>
+
+### How to use
+<code> Coming Soon!</code>
+
+
