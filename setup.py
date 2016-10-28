@@ -22,7 +22,7 @@ setup(name='Flask-NewProject',
       author='Raymond Williams',
       author_email='Raymond.n.williams86@gmail.com',
       license='MIT',
-      packages=['Flask-NewProject'],
+      packages=['Flask_NewProject'],
       install_requires=[
           'flask',
         ],
