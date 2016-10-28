@@ -25,3 +25,7 @@
 # the create a directory call tests, then create two files called
 # app.py, as the main program to run, and test_flask.py in the tests
 # directory to write your flask tests.
+
+
+def create_new_project():
+    print("this is going to create a new project.")
