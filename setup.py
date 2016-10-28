@@ -7,5 +7,5 @@ setup(name='Flask-NewProject',
       author='Raymond Williams',
       author_email='Raymond.n.williams86@gmail.com',
       license='MIT',
-      packages=['flask-project'],
+      packages=['Flask-NewProject'],
       zip_safe=False)
