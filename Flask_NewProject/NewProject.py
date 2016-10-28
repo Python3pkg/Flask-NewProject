@@ -27,6 +27,13 @@
 # directory to write your flask tests.
 
 import os
+from sys import argv
+
 
 def create_new_project():
     pwd = os.getcwd()
+    print(argv[1])
+
+
+if __name__ == "__main__":
+    create_new_project()
