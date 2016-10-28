@@ -18,7 +18,7 @@ setup(name='Flask-NewProject',
           'Natural Language :: English',
           'Programming Language :: Python :: 2.7',
           'Topic :: Utilities',
-        ]
+        ],
       author='Raymond Williams',
       author_email='Raymond.n.williams86@gmail.com',
       license='MIT',
@@ -26,4 +26,7 @@ setup(name='Flask-NewProject',
       install_requires=[
           'flask',
         ],
+      entry_points = {
+          'console_scripts': ['flask-new=Flask_NewProject.NewProject:create_new_project']
+        },
       zip_safe=False)
