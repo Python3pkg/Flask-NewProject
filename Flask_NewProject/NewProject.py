@@ -26,6 +26,7 @@
 # app.py, as the main program to run, and test_flask.py in the tests
 # directory to write your flask tests.
 
+import os
 
 def create_new_project():
-    print("this is going to create a new project.")
+    pwd = os.getcwd()
