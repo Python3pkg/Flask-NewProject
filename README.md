@@ -1,24 +1,28 @@
-# Flask-ProjectManager
+Flask-ProjectManager
+====================
 
 This will create a new Flask application with the ability to create a simple setup or if you are using blueprints.
 
-## Getting Started
+Getting Started
+===============
 
-### Prerequisites
+Prerequisites
+-------------
+
 
 ```
-Built with Python 2.7 and will test compatibility of Python 3.X
+    Built with Python 2.7 and will test compatibility of Python 3.X
 ```
 
 ### Installing
 
 ```
-pip install Flask-NewProject
+    pip install Flask-NewProject
 ```
 
 ## Usage Commands
 ```
-flask-skeleton ProjectName
+    flask-skeleton ProjectName
 ```
 This will create a skeleton structure with the root folder and package folder named ProjectName in whatever directory you are currently in.
 In the package folder, it will create app.py and tests.py in the tests folder.
