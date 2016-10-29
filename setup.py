@@ -7,8 +7,8 @@ def readme():
     
 setup(name='Flask-NewProject',
       version='0.1.0',
-      description='Create new Flask project.',
-      long_description=readme(),
+      description = 'Create new Flask project.',
+      long_description = readme(),
       url='https://github.com/Gunak/Flask-NewProject/',
       classifiers = [
           'Development Status :: 1 - Planning',
