@@ -37,7 +37,7 @@ Please contribute if you can. This project is just getting underway, but help is
 
 ## Version Information
 
-v0.0.1
+v0.1.0
 
 ## Authors
 
