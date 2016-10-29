@@ -8,3 +8,9 @@ python:
   - "3.5"
   - "3.5-dev" # 3.5 Development branch
   - "3.6-dev" # 3.5 Development branch
+
+# command to install dependencies
+install:
+  - pip install .
+  - pip install -r requirements.txt
+
