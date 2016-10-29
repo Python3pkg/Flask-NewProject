@@ -13,8 +13,15 @@ Built with Python 2.7 and will test compatibility of Python 3.X
 ### Installing
 
 ```
-I will be uploading to Cheese Shop eventually
+pip install Flask-NewProject
 ```
+
+## Usage Commands
+```
+flask-skeleton ProjectName
+```
+This will create a skeleton structure with the root folder and package folder named ProjectName in whatever directory you are currently in.
+In the package folder, it will create app.py and tests.py in the tests folder.
 
 ## Running Tests
 
@@ -26,7 +33,7 @@ Please contribute if you can. This project is just getting underway, but help is
 
 ## Version Information
 
-v0.0.0
+v0.0.1
 
 ## Authors
 
