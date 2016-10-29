@@ -1,7 +1,7 @@
 Flask-ProjectManager
 ====================
 
-This will create a new Flask application with the ability to create a simple setup or if you are using blueprints.
+This is a command line tool that will create a new Flask application with the ability to create a simple setup or if you are using blueprints.
 
 Getting Started
 ===============
@@ -11,7 +11,7 @@ Prerequisites
 
 
 ```
-    Built with Python 2.7 and will test compatibility of Python 3.X
+    Built with Python 2.7 and tested for  compatibility of Python 3.X
 ```
 
 ### Installing
