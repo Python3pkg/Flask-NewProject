@@ -30,10 +30,31 @@ import os
 from sys import argv
 
 
+def skeleton():
+    # will create a skeleton project with blank files.
+    create_new_project()
+
+def create_dirs(path):
+    directory = os.path.dirname(path)
+    if not os.path.exists(path):
+        os.mkdir(path)
+        
 def create_new_project():
     pwd = os.getcwd()
-    print(argv[1])
+    # 1) create directories bases on argv[1]
+    PROJECT_DIR = pwd+'/'+argv[1]
+    PROJECT_PACKAGE_DIR = PROJECT_DIR+'/'+argv[1]
+    TESTS_IN_PACKAGE = PROJECT_PACKAGE_DIR+'/tests'
+    
+    create_dirs(PROJECT_DIR)
+    create_dirs(PROJECT_PACKAGE_DIR)
+    create_dirs(TESTS_IN_PACKAGE)
+
+    # 2) crete files app.py and tests.py    
+    open(PROJECT_PACKAGE_DIR+'/app.py', 'a').close()
+    open(TESTS_IN_PACKAGE+'/tests.py', 'a').close()
+    
 
 
-if __name__ == "__main__":
-    create_new_project()
+#if __name__ == "__main__":
+#    create_new_project()
