@@ -11,16 +11,13 @@ Getting Started
 Prerequisites
 -------------
 
-
-```
-    Built with Python 2.7 and tested for  compatibility of Python 3.X
-```
+    Built with Python 2.7 and will be tested for compatibility of Python 3.X
 
 ### Installing
 
-```
+~~~~
     pip install Flask-NewProject
-```
+~~~~
 
 ## Usage Commands
 ```
