@@ -22,7 +22,6 @@ class SkeletonStructure(object):
         # This will create the main project folder, package folder(same name)
         # docs folder and tests folder
         _PROJECT_FOLDER = self.pwd + '/' + self.projectName
-        print(_PROJECT_FOLDER)
         create_dirs(_PROJECT_FOLDER)
         for folder in self.project_folders:
             create_dirs(_PROJECT_FOLDER + folder)
