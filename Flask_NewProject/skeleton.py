@@ -30,6 +30,7 @@ class SkeletonStructure(object):
         create_dirs(_PACKAGE_FOLDER)
 
         open(_PACKAGE_FOLDER + '/app.py', 'a').close()
+        open(_PACKAGE_FOLDER + '/__init__.py', 'a').close()
 
     
         
