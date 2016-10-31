@@ -23,10 +23,11 @@ setup(name='Flask-NewProject',
       author_email='Raymond.n.williams86@gmail.com',
       license='MIT',
       packages=['Flask_NewProject'],
-      install_requires=[
-          'flask',
-        ],
+#      install_requires=[
+#          'flask',
+#        ],
       entry_points = {
-          'console_scripts': ['flask-skeleton=Flask_NewProject.NewProject:skeleton']
+          'console_scripts': ['flask-skeleton=Flask_NewProject.NewProject:skeleton',
+                              'flask-simple=Flask_NewProject.NewProject:simple_setup']
         },
       zip_safe=False)
