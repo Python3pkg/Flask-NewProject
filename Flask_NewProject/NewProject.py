@@ -66,7 +66,7 @@ class CreateDirs(object):
     def set_dir_names(self):
         self._PROJECT_DIR = self.pwd+'/'+self.projectName
         self._PROJECT_PACKAGE_DIR = self._PROJECT_DIR+'/'+self.projectName
-        self._TESTS_IN_PACKAGE = self._PROJECT_DIR+'/test'
+        self._TESTS_IN_PACKAGE = self._PROJECT_PACKAGE_DIR+'/test'
 
     def create_new_project(self):
         # 1) create directories        
@@ -80,10 +80,11 @@ class CreateDirs(object):
         
 
     def add_to_files(self):
-        app_content = """from flask import Flask
+        app_content = """#!/usr/bin/env python2.7
+from flask import Flask
 
 
-app = Flask(__name___)
+app = Flask(__name__)
 
 @app.route('/')
 def index_page():
@@ -92,7 +93,8 @@ def index_page():
 if __name__ == '__main__':
     app.run(debug=True)"""
 
-        testing_content = """import {0}
+        testing_content = """#!/usr/bin/env python3
+import {0}
 import unittest
 
 class FlaskAppTesting(unittest.TestCase):
@@ -107,6 +109,11 @@ class FlaskAppTesting(unittest.TestCase):
     def test_for_Hello_World(self):
         rv = self.app.get('/')
         assert b'Hello World!'in rv.data""".format(self.projectName)
+
+        with open(self._PROJECT_PACKAGE_DIR+'/app.py', 'w') as app:
+            app.write(app_content)
+        with open(self._TESTS_IN_PACKAGE+'/tests.py', 'w') as test:
+            test.write(testing_content)
 
         
 
