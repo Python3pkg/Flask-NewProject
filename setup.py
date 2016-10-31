@@ -6,7 +6,7 @@ def readme():
         return f.read()
     
 setup(name='Flask-NewProject',
-      version='0.1.0',
+      version='0.1.1',
       description = 'Create new Flask project.',
       long_description = readme(),
       url='https://github.com/Gunak/Flask-NewProject/',
@@ -27,7 +27,7 @@ setup(name='Flask-NewProject',
 #          'flask',
 #        ],
       entry_points = {
-          'console_scripts': ['flask-skeleton=Flask_NewProject.NewProject:skeleton',
-                              'flask-simple=Flask_NewProject.NewProject:simple_setup']
+          'console_scripts': ['flask-skeleton=Flask_NewProject.skeleton:skeleton',
+                              'flask-simple=Flask_NewProject.simple:simple']
         },
       zip_safe=False)
