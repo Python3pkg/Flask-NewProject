@@ -13,7 +13,7 @@ Getting Started
 Prerequisites
 -------------
 
-Built with Python 2.7 and will be tested for compatibility of Python 3.X
+Built with Python 2.7
 
 * * *
 
@@ -22,10 +22,16 @@ Built with Python 2.7 and will be tested for compatibility of Python 3.X
     pip install Flask-NewProject
 
 ## Usage Commands ##
+
+For a skeleton structure:
     flask-skeleton ProjectName
 
-This will create a skeleton structure with the root folder and package folder named ProjectName in whatever directory you are currently in.
-In the package folder, it will create app.py and tests.py in the tests folder.
+This will create a simple skeleton structure with app.py created but with no content inside of it.
+
+For a simple structure:
+    flask-simple ProjecName
+
+This is the same as the skeleton structure with the addition of basic content in app.py and a test.py in the test directory. You can also run flask-simple right after flask-skeleton and it will add the basic setup into app.py as well.
 
 * * *
 
