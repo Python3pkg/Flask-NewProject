@@ -17,7 +17,7 @@ Built with Python 2.7 and will be tested for compatibility of Python 3.X
 
 * * *
 
-### Installing ###
+## Installing ##
 
     pip install Flask-NewProject
 
