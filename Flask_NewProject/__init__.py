@@ -1,2 +1,2 @@
-from .NewProject import CreateDirs
+from .CreateDirs import create_dirs
 
