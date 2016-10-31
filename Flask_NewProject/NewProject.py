@@ -5,34 +5,19 @@
 
 # This is called to create a new Flask project taking an argument of project name
 # This will create a simple as follows:
-#
-# in terminal run
-# $ FlaskProject FlaskApp
-#
-# will create the structure:
-# 
-# FlaskApp/
-# |
-# --FlaskApp/
-#   |
-#   --app.py
-#   |
-#   tests/
-#     |
-#     --test_flask.py
 
-# So this will make a direstory and subdirectory based on user input,
-# the create a directory call tests, then create two files called
-# app.py, as the main program to run, and test_flask.py in the tests
-# directory to write your flask tests.
 
 import os
 from sys import argv
+from script_info import run
+#import argparse
+
 
 # mapped to command name flask-skeleton
 def skeleton():
     # will create a skeleton project with blank files.
     skeleton = CreateDirs(argv[1])
+    skeleton.create_project_directory()
 
 # mapped to command name flask-simple
 def simple_setup():
@@ -56,27 +41,54 @@ class CreateDirs(object):
         self.projectName = projectName
 
         self.pwd = os.getcwd()
+
+        # in Project Dir is run.py, bin/ Project_Package/, docs/ tests/ and __init__.py
         self._PROJECT_DIR = None
+        self._IN_PROJECT_DIR = ['/bin', '/docs', '/tests']
+
+        # in Project Package is app.py for skeleton/simple and static/ templates/
+        # and for blueprint(s) its __init__.py, home/
         self._PROJECT_PACKAGE_DIR = None
-        self._TESTS_IN_PACKAGE = None
 
-        self.set_dir_names()
-        self.create_new_project()
+        # if it is blueprint, create in home/ __init__.py, controllers.py static/ templates/
+        self._CREATE_BLUEPRINT = None
 
-    def set_dir_names(self):
-        self._PROJECT_DIR = self.pwd+'/'+self.projectName
-        self._PROJECT_PACKAGE_DIR = self._PROJECT_DIR+'/'+self.projectName
-        self._TESTS_IN_PACKAGE = self._PROJECT_PACKAGE_DIR+'/test'
+        
+        #self.set_dir_names()
+        #self.create_new_project()
 
-    def create_new_project(self):
-        # 1) create directories        
+    def create_project_directory(self):
+        # will create parent directory and files in it
+        self._PROJECT_DIR = self.pwd + '/' + self.projectName
+
+        # Create folders in project folder
         create_dirs(self._PROJECT_DIR)
-        create_dirs(self._PROJECT_PACKAGE_DIR)
-        create_dirs(self._TESTS_IN_PACKAGE)
+        create_dirs(self._PROJECT_DIR + '/'+self.projectName)
+        for folder in self._IN_PROJECT_DIR:
+            create_dirs(self._PROJECT_DIR + folder)
+
+        # create files in project folder
+        open(self._PROJECT_DIR + '/__init__.py', 'a').close()
+        with open(self._PROJECT_DIR + '/run.py', 'w') as run_file:
+            run_file.write(run(self.projectName))
+
+    def create_project_package_directory(self):
+        # will create folders and files in package directory
+        pass
+
+    def create_blueprint_directory(self):
+        # will create a blueprint directory and files in it
+        pass
+
+    #def create_new_project(self):
+        # 1) create directories        
+        #create_dirs(self._PROJECT_DIR)
+        #create_dirs(self._PROJECT_PACKAGE_DIR)
+        #create_dirs(self._TESTS_IN_PACKAGE)
 
         # 2) crete files app.py and tests.py    
-        open(self._PROJECT_PACKAGE_DIR+'/app.py', 'a').close()
-        open(self._TESTS_IN_PACKAGE+'/tests.py', 'a').close()
+        #open(self._PROJECT_PACKAGE_DIR+'/app.py', 'a').close()
+        #open(self._TESTS_IN_PACKAGE+'/tests.py', 'a').close()
         
 
     def add_to_files(self):
