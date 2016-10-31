@@ -23,4 +23,9 @@ class SimpleStructure(object):
         with open(pwd+'/'+self.projectName+'/'+self.projectName+'/app.py', 'w') as app_file:
             app_file.write(app_simple())
 
+        with open(pwd+'/'+self.projectName+'/tests/tests.py', 'w') as test_info:
+            test_info.write(basic_test_for_flask())
+
+        
+
         
