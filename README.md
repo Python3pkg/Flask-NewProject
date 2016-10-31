@@ -37,7 +37,11 @@ This is the same as the skeleton structure with the addition of basic content in
 
 ## Running Tests ##
 
-I will be creating automated tests
+Testing your new simple-structure
+I use nosetests from the project folder and run
+    nosetests
+
+There are two built in tests with flask-simple. One the check response code 200 and the other is for Hello World!
 
 * * *
 
