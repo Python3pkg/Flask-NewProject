@@ -53,7 +53,7 @@ Please contribute if you can. This project is just getting underway, but help is
 
 ## Version Information ##
 
-0.1.0
+0.2.0
 
 * * *
 
