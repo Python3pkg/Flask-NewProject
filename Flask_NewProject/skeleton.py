@@ -1,7 +1,7 @@
 # This is to create a skeleton structure of a flask web app with no extra content
 import os
 from sys import argv
-from CreateDirs import create_dirs
+from .CreateDirs import create_dirs
 
 
 def skeleton():

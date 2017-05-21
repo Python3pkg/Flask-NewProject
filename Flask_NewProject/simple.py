@@ -1,5 +1,5 @@
-from skeleton import SkeletonStructure
-from script_info import app_simple, basic_test_for_flask
+from .skeleton import SkeletonStructure
+from .script_info import app_simple, basic_test_for_flask
 from sys import argv
 import os
 
